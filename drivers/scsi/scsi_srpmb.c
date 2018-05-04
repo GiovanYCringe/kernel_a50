@@ -233,8 +233,8 @@ static void srpmb_worker(struct work_struct *data)
 		dev_err(&sr_pdev->dev, "invalid requset type : %x\n", req->type);
 	}
 
+	dev_info(dev, "finish rpmb workqueue with command(%d)\n", req->type);
 	__pm_relax(&rpmb_ctx->wakesrc);
-	dev_info(&sr_pdev->dev, "finish rpmb workqueue with command(%d)\n", req->type);
 }
 
 static int srpmb_suspend_notifier(struct notifier_block *nb, unsigned long event,
