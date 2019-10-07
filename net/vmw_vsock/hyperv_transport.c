@@ -494,11 +494,8 @@ static void hvs_release(struct vsock_sock *vsk)
 	struct hvsock *hvs = vsk->trans;
 	struct vmbus_channel *chan;
 
-	lock_sock(sk);
-
-	sk->sk_state = TCP_CLOSING;
-	vsock_remove_sock(vsk);
-
+	lock_sock_nested(sk, SINGLE_DEPTH_NESTING);
+	remove_sock = hvs_close_lock_held(vsk);
 	release_sock(sk);
 
 	chan = hvs->chan;
