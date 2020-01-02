@@ -30,7 +30,7 @@ jobs:
       - name: Upload to Telegram
         uses: appleboy/telegram-action@master
         with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          to: ${{ secrets.TELEGRAM_CHAT2_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           document: Lemonade-a505f-*.zip
           message: "New Lemonade Kernel Update! Download Now!!"

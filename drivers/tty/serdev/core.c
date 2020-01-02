@@ -49,14 +49,32 @@ static const struct device_type serdev_ctrl_type = {
 
 static int serdev_device_match(struct device *dev, struct device_driver *drv)
 {
-	/* TODO: ACPI and platform matching */
-	return of_driver_match_device(dev, drv);
+	/* TODO: ACPI matching */
+
+	if (of_driver_match_device(dev, drv))
+		return 1;
+
+	if (dev->parent->parent->bus == &platform_bus_type &&
+	    dev->parent->parent->bus->match(dev->parent->parent, drv))
+		return 1;
+
+	return 0;
 }
 
 static int serdev_uevent(struct device *dev, struct kobj_uevent_env *env)
 {
-	/* TODO: ACPI and platform modalias */
-	return of_device_uevent_modalias(dev, env);
+	int rc;
+
+	/* TODO: ACPI modalias */
+
+	rc = of_device_uevent_modalias(dev, env);
+	if (rc != -ENODEV)
+		return rc;
+
+	if (dev->parent->parent->bus == &platform_bus_type)
+		rc = dev->parent->parent->bus->uevent(dev->parent->parent, env);
+
+	return rc;
 }
 
 /**
