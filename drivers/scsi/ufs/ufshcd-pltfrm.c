@@ -388,6 +388,8 @@ int ufshcd_pltfrm_init(struct platform_device *pdev,
 	}
 
 	ufshcd_init_lanes_per_dir(hba);
+	ufshcd_parse_pm_lvl_policy(hba);
+	ufshcd_parse_caps_info(hba);
 
 	err = ufshcd_init(hba, mmio_base, irq);
 	if (err) {
