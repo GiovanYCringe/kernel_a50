@@ -25,6 +25,9 @@ source "drivers/nvme/Kconfig"
 
 source "drivers/misc/Kconfig"
 
+source "drivers/muic/Kconfig"
+
+source "drivers/ifconn/Kconfig"
 source "drivers/ide/Kconfig"
 
 source "drivers/scsi/Kconfig"
@@ -208,5 +211,29 @@ source "drivers/fsi/Kconfig"
 source "drivers/tee/Kconfig"
 
 source "drivers/mux/Kconfig"
+
+source "drivers/bts/Kconfig"
+
+source "drivers/gud/Kconfig"
+
+source "drivers/battery_v2/Kconfig"
+
+source "drivers/switch/Kconfig"
+
+source "drivers/fingerprint/Kconfig"
+
+source "drivers/motor/Kconfig"
+
+source "drivers/vision/Kconfig"
+
+source "drivers/sensorhub/Kconfig"
+
+source "drivers/security/samsung/five_tee_driver/Kconfig"
+
+source "drivers/icdrv/Kconfig"
+
+source "drivers/samsung/Kconfig"
+
+source "drivers/security/samsung/tzic/Kconfig"
 
 endmenu

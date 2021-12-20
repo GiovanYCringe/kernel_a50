@@ -70,3 +70,4 @@ source security/integrity/ima/Kconfig
 source security/integrity/evm/Kconfig
 
 endif   # if INTEGRITY
+
