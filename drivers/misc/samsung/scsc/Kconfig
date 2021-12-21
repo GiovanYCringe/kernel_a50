@@ -144,10 +144,6 @@ config SCSC_LOGRING_DEBUGFS
         depends on SCSC_LOGRING && DEBUG_FS
         default y
 
-config SCSC_LOG_COLLECTION
-	tristate "Samsung SCSC Log Collection"
-	depends on SCSC_CORE
-
 config SCSC_WIFILOGGER_DEBUGFS
 	bool "Samsung SCSC Android Wi-Fi Logger DebugFS"
 	depends on SCSC_WIFILOGGER && DEBUG_FS
