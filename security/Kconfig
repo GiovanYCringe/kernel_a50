@@ -272,11 +272,5 @@ config DEFAULT_SECURITY
 	default "apparmor" if DEFAULT_SECURITY_APPARMOR
 	default "" if DEFAULT_SECURITY_DAC
 
-config DDAR
-    bool "Enables dual encryption"
-    default n
-    help
-    Knox Dual-DAR (Data-At-Rest) protection
-
 endmenu
 
