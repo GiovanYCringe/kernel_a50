@@ -32,7 +32,7 @@ struct __packed gnss_log {
 
 extern struct gnss_log log_info;
 
-static const char const *direction_string[] = {
+static  char const *direction_string[] = {
 	[TX] = "TX",
 	[RX] = "RX"
 };

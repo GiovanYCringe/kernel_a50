@@ -2290,7 +2290,7 @@ static const char * const rt5665_jack_type_mode[] = {
 	"Disable", "read"
 };
 
-static const SOC_ENUM_SINGLE_DECL(rt5665_jack_type_enum, 0, 0,
+static  SOC_ENUM_SINGLE_DECL(rt5665_jack_type_enum, 0, 0,
 	rt5665_jack_type_mode);
 
 static int rt5665_jack_type_get(struct snd_kcontrol *kcontrol,
@@ -2312,7 +2312,7 @@ static int rt5665_jack_type_put(struct snd_kcontrol *kcontrol,
 	return 0;
 }
 
-static const SOC_ENUM_SINGLE_DECL(rt5665_button_type_enum, 0, 0,
+static  SOC_ENUM_SINGLE_DECL(rt5665_button_type_enum, 0, 0,
 	rt5665_jack_type_mode);
 
 static int rt5665_button_type_get(struct snd_kcontrol *kcontrol,
@@ -2339,35 +2339,35 @@ static const char * const rt5665_asrc_clk_src[] = {
 	"clk_i2s5_track", "clk_sys", "clk_sys2", "clk_sys3"
 };
 
-static const SOC_ENUM_SINGLE_DECL(
+static  SOC_ENUM_SINGLE_DECL(
 	rt5665_da_sto1_asrc_enum, RT5665_ASRC_2, RT5665_DA_STO1_CLK_SEL_SFT,
 	rt5665_asrc_clk_src);
 
-static const SOC_ENUM_SINGLE_DECL(
+static  SOC_ENUM_SINGLE_DECL(
 	rt5665_da_monol_asrc_enum, RT5665_ASRC_2, RT5665_DA_MONOL_CLK_SEL_SFT,
 	rt5665_asrc_clk_src);
 
-static const SOC_ENUM_SINGLE_DECL(
+static  SOC_ENUM_SINGLE_DECL(
 	rt5665_da_monor_asrc_enum, RT5665_ASRC_2, RT5665_DA_MONOR_CLK_SEL_SFT,
 	rt5665_asrc_clk_src);
 
-static const SOC_ENUM_SINGLE_DECL(
+static  SOC_ENUM_SINGLE_DECL(
 	rt5665_da_sto2_asrc_enum, RT5665_ASRC_2, RT5665_DA_STO2_CLK_SEL_SFT,
 	rt5665_asrc_clk_src);
 
-static const SOC_ENUM_SINGLE_DECL(
+static  SOC_ENUM_SINGLE_DECL(
 	rt5665_ad_sto1_asrc_enum, RT5665_ASRC_3, RT5665_AD_STO1_CLK_SEL_SFT,
 	rt5665_asrc_clk_src);
 
-static const SOC_ENUM_SINGLE_DECL(
+static  SOC_ENUM_SINGLE_DECL(
 	rt5665_ad_sto2_asrc_enum, RT5665_ASRC_3, RT5665_AD_STO2_CLK_SEL_SFT,
 	rt5665_asrc_clk_src);
 
-static const SOC_ENUM_SINGLE_DECL(
+static  SOC_ENUM_SINGLE_DECL(
 	rt5665_ad_monol_asrc_enum, RT5665_ASRC_3, RT5665_AD_MONOL_CLK_SEL_SFT,
 	rt5665_asrc_clk_src);
 
-static const SOC_ENUM_SINGLE_DECL(
+static  SOC_ENUM_SINGLE_DECL(
 	rt5665_ad_monor_asrc_enum, RT5665_ASRC_3, RT5665_AD_MONOL_CLK_SEL_SFT,
 	rt5665_asrc_clk_src);
 
