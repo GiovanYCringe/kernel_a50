@@ -103,7 +103,7 @@ enum gnss_state {
 	STATE_FAULT, /* ACTIVE/WDT */
 };
 
-static const char const *gnss_state_str[] = {
+static char const *gnss_state_str[] = {
 	[STATE_OFFLINE]			= "OFFLINE",
 	[STATE_FIRMWARE_DL]		= "FIRMWARE_DL",
 	[STATE_ONLINE]			= "ONLINE",
