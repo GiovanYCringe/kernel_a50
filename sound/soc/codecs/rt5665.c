@@ -942,49 +942,49 @@ static const char * const rt5665_data_select[] = {
 	"L/R", "R/L", "L/L", "R/R"
 };
 
-static  SOC_ENUM_SINGLE_DECL(rt5665_if1_1_01_adc_enum,
+static const SOC_ENUM_SINGLE_DECL(rt5665_if1_1_01_adc_enum,
 	RT5665_TDM_CTRL_2, RT5665_I2S1_1_DS_ADC_SLOT01_SFT, rt5665_data_select);
 
-static  SOC_ENUM_SINGLE_DECL(rt5665_if1_1_23_adc_enum,
+static const SOC_ENUM_SINGLE_DECL(rt5665_if1_1_23_adc_enum,
 	RT5665_TDM_CTRL_2, RT5665_I2S1_1_DS_ADC_SLOT23_SFT, rt5665_data_select);
 
-static  SOC_ENUM_SINGLE_DECL(rt5665_if1_1_45_adc_enum,
+static const SOC_ENUM_SINGLE_DECL(rt5665_if1_1_45_adc_enum,
 	RT5665_TDM_CTRL_2, RT5665_I2S1_1_DS_ADC_SLOT45_SFT, rt5665_data_select);
 
-static  SOC_ENUM_SINGLE_DECL(rt5665_if1_1_67_adc_enum,
+static const SOC_ENUM_SINGLE_DECL(rt5665_if1_1_67_adc_enum,
 	RT5665_TDM_CTRL_2, RT5665_I2S1_1_DS_ADC_SLOT67_SFT, rt5665_data_select);
 
-static  SOC_ENUM_SINGLE_DECL(rt5665_if1_2_01_adc_enum,
+static const SOC_ENUM_SINGLE_DECL(rt5665_if1_2_01_adc_enum,
 	RT5665_TDM_CTRL_2, RT5665_I2S1_2_DS_ADC_SLOT01_SFT, rt5665_data_select);
 
-static  SOC_ENUM_SINGLE_DECL(rt5665_if1_2_23_adc_enum,
+static const SOC_ENUM_SINGLE_DECL(rt5665_if1_2_23_adc_enum,
 	RT5665_TDM_CTRL_2, RT5665_I2S1_2_DS_ADC_SLOT23_SFT, rt5665_data_select);
 
-static  SOC_ENUM_SINGLE_DECL(rt5665_if1_2_45_adc_enum,
+static const SOC_ENUM_SINGLE_DECL(rt5665_if1_2_45_adc_enum,
 	RT5665_TDM_CTRL_2, RT5665_I2S1_2_DS_ADC_SLOT45_SFT, rt5665_data_select);
 
-static  SOC_ENUM_SINGLE_DECL(rt5665_if1_2_67_adc_enum,
+static const SOC_ENUM_SINGLE_DECL(rt5665_if1_2_67_adc_enum,
 	RT5665_TDM_CTRL_2, RT5665_I2S1_2_DS_ADC_SLOT67_SFT, rt5665_data_select);
 
-static  SOC_ENUM_SINGLE_DECL(rt5665_if2_1_dac_enum,
+static const SOC_ENUM_SINGLE_DECL(rt5665_if2_1_dac_enum,
 	RT5665_DIG_INF2_DATA, RT5665_IF2_1_DAC_SEL_SFT, rt5665_data_select);
 
-static  SOC_ENUM_SINGLE_DECL(rt5665_if2_1_adc_enum,
+static const SOC_ENUM_SINGLE_DECL(rt5665_if2_1_adc_enum,
 	RT5665_DIG_INF2_DATA, RT5665_IF2_1_ADC_SEL_SFT, rt5665_data_select);
 
-static  SOC_ENUM_SINGLE_DECL(rt5665_if2_2_dac_enum,
+static const SOC_ENUM_SINGLE_DECL(rt5665_if2_2_dac_enum,
 	RT5665_DIG_INF2_DATA, RT5665_IF2_2_DAC_SEL_SFT, rt5665_data_select);
 
-static  SOC_ENUM_SINGLE_DECL(rt5665_if2_2_adc_enum,
+static const SOC_ENUM_SINGLE_DECL(rt5665_if2_2_adc_enum,
 	RT5665_DIG_INF2_DATA, RT5665_IF2_2_ADC_SEL_SFT, rt5665_data_select);
 
-static  SOC_ENUM_SINGLE_DECL(rt5665_if3_dac_enum,
+static const SOC_ENUM_SINGLE_DECL(rt5665_if3_dac_enum,
 	RT5665_DIG_INF3_DATA, RT5665_IF3_DAC_SEL_SFT, rt5665_data_select);
 
-static  SOC_ENUM_SINGLE_DECL(rt5665_if3_adc_enum,
+static const SOC_ENUM_SINGLE_DECL(rt5665_if3_adc_enum,
 	RT5665_DIG_INF3_DATA, RT5665_IF3_ADC_SEL_SFT, rt5665_data_select);
 
-static  const struct snd_kcontrol_new rt5665_if1_1_01_adc_swap_mux =
+static const struct snd_kcontrol_new rt5665_if1_1_01_adc_swap_mux =
 	SOC_DAPM_ENUM("IF1_1 01 ADC Swap Source", rt5665_if1_1_01_adc_enum);
 
 static const struct snd_kcontrol_new rt5665_if1_1_23_adc_swap_mux =
