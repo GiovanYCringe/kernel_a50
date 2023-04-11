@@ -152,12 +152,6 @@
 	firmware {
 		android {
 			compatible = "android,firmware";
-			vbmeta {
-				compatible = "android,vbmeta";
-				status = "disabled";
-				linux,phandle = <0x10f>;
-				phandle = <0x10f>;
-			};
 			fstab {
 				compatible = "android,fstab";
 				system {
@@ -165,7 +159,7 @@
 					dev = "/dev/block/platform/13520000.ufs/by-name/system";
 					type = "ext4";
 					mnt_flags = "ro";
-					fsmgr_flags = "wait,avb";
+					fsmgr_flags = "wait";
 					status = "disabled";
 				};
 				vendor {
@@ -173,7 +167,7 @@
 					dev = "/dev/block/platform/13520000.ufs/by-name/vendor";
 					type = "ext4";
 					mnt_flags = "ro";
-					fsmgr_flags = "wait,verify,avb";
+					fsmgr_flags = "wait";
 					status = "okay";
 				};
 			};
