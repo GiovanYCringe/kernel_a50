@@ -30,8 +30,10 @@ jobs:
       - name: Build
         run: ./build/build.sh
 
-      - name: Uploading image
-        run: |
-             cd out/arch/arm64/boot
-             curl -sL https://git.io/file-transfer | sh
-             ./transfer Image
+      - name: Upload to Telegram
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          document: Lemonade-a505f-*.zip
+          message: "New Lemonade Kernel Update! Download Now!!"
