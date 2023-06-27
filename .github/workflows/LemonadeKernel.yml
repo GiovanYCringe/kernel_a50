@@ -24,11 +24,8 @@ jobs:
           sudo apt-get upgrade -y
           sudo apt-get install build-essential gcc-aarch64-linux-gnu -y
 
-      - name: Cloning script
-        run: git clone https://github.com/GiovanYCringe/kernel-build build/
-
       - name: Build
-        run: ./build/build.sh
+        run: ./build.sh
 
       - name: Upload to Telegram
         uses: appleboy/telegram-action@master
