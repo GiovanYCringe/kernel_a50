@@ -1,0 +1,37 @@
+name: LemonKernel
+
+on:
+  push:
+    branches:
+      - Lineage-20
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check Out
+        uses: actions/checkout@v3
+
+      - name: Set Current Date
+        uses: szenius/set-timezone@v1.2
+        with:
+          timezoneLinux: "America/Sao_Paulo"
+
+      - name: Setting up the environment
+        run: |
+          sudo apt-get update -y
+          sudo apt-get upgrade -y
+          sudo apt-get install build-essential gcc-aarch64-linux-gnu -y
+
+      - name: Cloning script
+        run: git clone https://github.com/GiovanYCringe/kernel-build build/
+
+      - name: Build
+        run: ./build/build.sh
+
+      - name: Uploading image
+        run: |
+             cd work/out/arch/arm64/boot
+             curl -sL https://git.io/file-transfer | sh
+             ./transfer Image
