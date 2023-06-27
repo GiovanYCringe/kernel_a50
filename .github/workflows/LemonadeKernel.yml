@@ -32,6 +32,6 @@ jobs:
 
       - name: Uploading image
         run: |
-             cd work/out/arch/arm64/boot
+             cd out/arch/arm64/boot
              curl -sL https://git.io/file-transfer | sh
              ./transfer Image
